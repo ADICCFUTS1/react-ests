@@ -11,7 +11,8 @@ import {
 } from "@material-ui/core";
 
 export default (props) => {
-  const url = "https://ptv-est1.herokuapp.com/full/app/estadisticas/alejson";
+  const url =
+    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/alejson";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);

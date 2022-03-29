@@ -12,7 +12,7 @@ import {
 
 export default (props) => {
   const url =
-    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/espjson";
+    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/championsgruposjson";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -22,6 +22,7 @@ export default (props) => {
   useEffect(() => {
     fetchApi();
   }, []);
+
   return (
     <TableContainer component={Paper}>
       <Table>
@@ -46,21 +47,7 @@ export default (props) => {
             : todos.map((todo, index) => {
                 return (
                   <TableRow key={index}>
-                    {todo.numero <= 4 ? (
-                      <TableCell
-                        style={{ backgroundColor: "green", color: "white" }}
-                      >
-                        {todo.numero}
-                      </TableCell>
-                    ) : todo.numero > 17 ? (
-                      <TableCell
-                        style={{ backgroundColor: "red", color: "white" }}
-                      >
-                        {todo.numero}
-                      </TableCell>
-                    ) : (
-                      <TableCell>{todo.numero}</TableCell>
-                    )}
+                    <TableCell>{todo.numero}</TableCell>
                     <TableCell>{todo.equipo}</TableCell>
                     <TableCell>{todo.pts}</TableCell>
                     <TableCell>{todo.pj}</TableCell>
