@@ -40,14 +40,21 @@ export default (props) => {
             <TableCell>DIF</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-          {/*{props.data.rows.map((item, indx) => {*/}
-          {!todos
-            ? "Cargando..."
-            : todos.map((todo, index) => {
-                return (
+        {!todos
+          ? "Cargando..."
+          : todos.map((todo, index) => {
+              return (
+                <TableBody>
                   <TableRow key={index}>
-                    <TableCell>{todo.numero}</TableCell>
+                    {todo.numero <= 2 ? (
+                      <TableCell
+                        style={{ backgroundColor: "green", color: "white" }}
+                      >
+                        {todo.numero}
+                      </TableCell>
+                    ) : (
+                      <TableCell>{todo.numero}</TableCell>
+                    )}
                     <TableCell>{todo.equipo}</TableCell>
                     <TableCell>{todo.pts}</TableCell>
                     <TableCell>{todo.pj}</TableCell>
@@ -58,10 +65,9 @@ export default (props) => {
                     <TableCell>{todo.gc}</TableCell>
                     <TableCell>{todo.dif}</TableCell>
                   </TableRow>
-                );
-              })}
-          {/*})}*/}
-        </TableBody>
+                </TableBody>
+              );
+            })}
         <TableFooter />
       </Table>
     </TableContainer>
