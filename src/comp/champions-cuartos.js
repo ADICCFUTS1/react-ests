@@ -42,7 +42,7 @@ export default (props) => {
           Grupos
         </Button>
 
-        <Button variant="outlined">Octavos</Button>
+        <Button variant="outlined">Cuartos</Button>
       </div>
 
       <Typography variant="h5" component="h5">

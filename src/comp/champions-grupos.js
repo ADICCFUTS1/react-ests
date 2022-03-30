@@ -39,8 +39,8 @@ export default (props) => {
       <div className={classes.root}>
         <Button variant="outlined">Grupos</Button>
 
-        <Button variant="outlined" href="champions-octavos">
-          Octavos
+        <Button variant="outlined" href="champions-cuartos">
+          Cuartos
         </Button>
       </div>
 
