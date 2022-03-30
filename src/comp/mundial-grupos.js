@@ -18,6 +18,9 @@ const useStyles = makeStyles((theme) => ({
     "& > *": {
       margin: theme.spacing(1)
     }
+  },
+  customTableContainer: {
+    overflowX: "initial"
   }
 }));
 export default (props) => {
