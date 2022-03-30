@@ -46,7 +46,7 @@ export default (props) => {
       </div>
 
       <Typography variant="h5" component="h5">
-        Octavos de final
+        Cuartos de final
       </Typography>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
