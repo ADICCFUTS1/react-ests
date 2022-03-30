@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Bundesliga from "./comp/bundesliga";
 import LaLiga from "./comp/laliga";
 import ChampionsGrupos from "./comp/champions-grupos";
+import ChampionsOctavos from "./comp/champions-octavos";
 import EliminatoriasConmebol from "./comp/eliminatorias-conmebol";
 
 function Apps() {
@@ -12,6 +13,7 @@ function Apps() {
         <Route path="/bundesliga" element={<Bundesliga />} />
         <Route path="/laliga" element={<LaLiga />} />
         <Route path="/champions-grupos" element={<ChampionsGrupos />} />
+        <Route path="/champions-octavos" element={<ChampionsOctavos />} />
         <Route
           path="/eliminatorias-conmebol"
           element={<EliminatoriasConmebol />}
