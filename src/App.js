@@ -5,6 +5,7 @@ import LaLiga from "./comp/laliga";
 import ChampionsGrupos from "./comp/champions-grupos";
 import ChampionsOctavos from "./comp/champions-octavos";
 import EliminatoriasConmebol from "./comp/eliminatorias-conmebol";
+import MundialGrupos from "./comp/mundial-grupos";
 
 function Apps() {
   return (
@@ -18,6 +19,7 @@ function Apps() {
           path="/eliminatorias-conmebol"
           element={<EliminatoriasConmebol />}
         />
+        <Route path="/mundial-grupos" element={<MundialGrupos />} />
       </Routes>
     </>
   );

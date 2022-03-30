@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/championsgruposjson";
+    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/mundialgrupos";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -39,7 +39,7 @@ export default (props) => {
       <div className={classes.root}>
         <Button variant="outlined">Grupos</Button>
 
-        <Button variant="outlined" href="champions-octavos">
+        <Button variant="outlined" disabled>
           Octavos
         </Button>
       </div>
