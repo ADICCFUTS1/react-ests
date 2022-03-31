@@ -11,8 +11,11 @@ import {
   TableContainer,
   Paper,
   Button,
-  Divider
+  Divider,
+  IconButton
 } from "@material-ui/core";
+import RefreshIcon from "@material-ui/icons/Refresh";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -36,15 +39,20 @@ export default (props) => {
     fetchApi();
   }, []);
   const classes = useStyles();
-
+  function refreshPage() {
+    window.location.reload(false);
+  }
   return (
     <div>
       <div className={classes.root}>
+        <IconButton
+          onClick={refreshPage}
+          aria-label="delete"
+          className={classes.margin}
+        >
+          <RefreshIcon fontSize="small" />
+        </IconButton>
         <Button variant="outlined">Grupos</Button>
-
-        <Button variant="outlined" disabled>
-          Octavos
-        </Button>
       </div>
 
       <TableContainer component={Paper}>
