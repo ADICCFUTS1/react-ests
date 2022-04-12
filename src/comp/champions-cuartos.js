@@ -43,11 +43,13 @@ export default (props) => {
         </Button>
 
         <Button variant="outlined">Cuartos</Button>
+        <Button variant="outlined">Semifinal</Button>
       </div>
 
       <Typography variant="h5" component="h5">
         Cuartos de final
       </Typography>
+
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           {/*<TableHead>
@@ -67,8 +69,8 @@ export default (props) => {
                     <TableRow key={index}>
                       <TableCell component="th" scope="row"></TableCell>
                       <TableCell>{todo.equipo1}</TableCell>
-                      <TableCell></TableCell>
-                      <TableCell></TableCell>
+                      <TableCell>{todo.local1}</TableCell>
+                      <TableCell>{todo.local2}</TableCell>
                       <TableCell>{todo.equipo2}</TableCell>
                     </TableRow>
                   </TableBody>
