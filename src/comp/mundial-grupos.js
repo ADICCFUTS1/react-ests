@@ -99,10 +99,10 @@ export default (props) => {
                   </TableBody>
                 );
               })}
+
           <TableFooter />
         </Table>
       </TableContainer>
-      <Divider />
     </div>
   );
 };
