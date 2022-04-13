@@ -43,7 +43,9 @@ export default (props) => {
           Cuartos
         </Button>
 
-        <Button variant="outlined">Semifinal</Button>
+        <Button variant="outlined" href="champions-semis">
+          SEMIFINALES
+        </Button>
       </div>
 
       <TableContainer component={Paper}>

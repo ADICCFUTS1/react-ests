@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/champions-cuartos";
+    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/champions-semis";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -42,14 +42,14 @@ export default (props) => {
           Grupos
         </Button>
 
-        <Button variant="outlined">Cuartos</Button>
-        <Button variant="outlined" href="champions-semis">
-          SEMIFINALES
+        <Button variant="outlined" href="champions-cuartos">
+          Cuartos
         </Button>
+        <Button variant="outlined">SEMIFINALES</Button>
       </div>
 
       <Typography variant="h5" component="h5">
-        Cuartos de final
+        Semifinales
       </Typography>
 
       <TableContainer component={Paper}>
