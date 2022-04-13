@@ -35,13 +35,11 @@ export default (props) => {
             <TableCell>PG</TableCell>
             <TableCell>PE</TableCell>
             <TableCell>PP</TableCell>
-            <TableCell>GF</TableCell>
-            <TableCell>GC</TableCell>
+            <TableCell>GF : GC</TableCell>
             <TableCell>DIF</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
-          {/*{props.data.rows.map((item, indx) => {*/}
           {!todos
             ? "Cargando..."
             : todos.map((todo, index) => {
@@ -69,13 +67,13 @@ export default (props) => {
                     <TableCell>{todo.pg}</TableCell>
                     <TableCell>{todo.pe}</TableCell>
                     <TableCell>{todo.pp}</TableCell>
-                    <TableCell>{todo.gf}</TableCell>
-                    <TableCell>{todo.gc}</TableCell>
+                    <TableCell>
+                      {todo.gf} : {todo.gc}
+                    </TableCell>
                     <TableCell>{todo.dif}</TableCell>
                   </TableRow>
                 );
               })}
-          {/*})}*/}
         </TableBody>
 
         <TableFooter />
