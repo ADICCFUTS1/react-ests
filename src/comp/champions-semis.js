@@ -1,5 +1,7 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
+
+import { NavLink, Link, withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 import {
@@ -38,20 +40,22 @@ export default (props) => {
   return (
     <div>
       <div className={classes.root}>
-        <Button variant="outlined" href="champions-grupos">
-          Grupos
+        <Button variant="outlined">
+          <NavLink to="/champions-grupos">Grupos</NavLink>
         </Button>
 
-        <Button variant="outlined" href="champions-cuartos">
-          Cuartos
+        <Button variant="outlined">
+          <NavLink to="/champions-cuartos">Cuartos</NavLink>
         </Button>
-        <Button variant="outlined">SEMIFINALES</Button>
+
+        <Button variant="outlined">
+          <NavLink to="/champions-semis">Semifinales</NavLink>
+        </Button>
       </div>
 
       <Typography variant="h5" component="h5">
         Semifinales
       </Typography>
-
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           {/*<TableHead>

@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+
+import { NavLink, Link, withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 import {
@@ -37,14 +39,16 @@ export default (props) => {
   return (
     <div>
       <div className={classes.root}>
-        <Button variant="outlined">Grupos</Button>
-
-        <Button variant="outlined" href="champions-cuartos">
-          Cuartos
+        <Button variant="outlined">
+          <NavLink to="/champions-grupos">Grupos</NavLink>
         </Button>
 
-        <Button variant="outlined" href="champions-semis">
-          SEMIFINALES
+        <Button variant="outlined">
+          <NavLink to="/champions-cuartos">Cuartos</NavLink>
+        </Button>
+
+        <Button variant="outlined">
+          <NavLink to="/champions-semis">Semifinales</NavLink>
         </Button>
       </div>
 
