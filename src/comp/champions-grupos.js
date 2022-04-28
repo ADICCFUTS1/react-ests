@@ -39,17 +39,17 @@ export default (props) => {
   return (
     <div>
       <div className={classes.root}>
-        <Button variant="outlined">
-          <NavLink to="/champions-grupos">Grupos</NavLink>
-        </Button>
+        <NavLink to="/champions-grupos">
+          <Button variant="outlined">Grupos</Button>
+        </NavLink>
 
-        <Button variant="outlined">
-          <NavLink to="/champions-cuartos">Cuartos</NavLink>
-        </Button>
+        <NavLink to="/champions-cuartos">
+          <Button variant="outlined">Cuartos</Button>
+        </NavLink>
 
-        <Button variant="outlined">
-          <NavLink to="/champions-semis">Semifinales</NavLink>
-        </Button>
+        <NavLink to="/champions-semis">
+          <Button variant="outlined">Semifinales</Button>
+        </NavLink>
       </div>
 
       <TableContainer component={Paper}>
