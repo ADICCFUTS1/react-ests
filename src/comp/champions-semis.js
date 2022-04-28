@@ -40,15 +40,15 @@ export default (props) => {
   return (
     <div>
       <div className={classes.root}>
-        <NavLink to="/champions-grupos">
+        <NavLink to="/champions-grupos" style={{ textDecoration: "none" }}>
           <Button variant="outlined">Grupos</Button>
         </NavLink>
 
-        <NavLink to="/champions-cuartos">
+        <NavLink to="/champions-cuartos" style={{ textDecoration: "none" }}>
           <Button variant="outlined">Cuartos</Button>
         </NavLink>
 
-        <NavLink to="/champions-semis">
+        <NavLink to="/champions-semis" style={{ textDecoration: "none" }}>
           <Button variant="outlined">Semifinales</Button>
         </NavLink>
       </div>
