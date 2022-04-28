@@ -13,7 +13,7 @@ import {
 
 export default (props) => {
   const url =
-    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/ligaargjson";
+    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/ligaargjson";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);

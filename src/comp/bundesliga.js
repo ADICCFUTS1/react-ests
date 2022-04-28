@@ -12,7 +12,7 @@ import {
 
 export default (props) => {
   const url =
-    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/alejson";
+    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/alejson";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);

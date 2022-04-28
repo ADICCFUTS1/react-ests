@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/libertadoresgrupos";
+    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/libertadoresgrupos";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);

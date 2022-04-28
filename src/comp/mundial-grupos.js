@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://ptv-est1.herokuapp.com/full/app/estadisticas/json/mundialgrupos";
+    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/mundialgrupos";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
