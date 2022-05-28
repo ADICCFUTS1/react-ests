@@ -8,6 +8,7 @@ import ChampionsGrupos from "./comp/champions-grupos";
 import LibertadoresGrupos from "./comp/libertadores-grupos";
 import ChampionsCuartos from "./comp/champions-cuartos";
 import ChampionsSemis from "./comp/champions-semis";
+import ChampionsFinal from "./comp/champions-final";
 import EuropaCuartos from "./comp/europa-cuartos";
 import EliminatoriasConmebol from "./comp/eliminatorias-conmebol";
 import MundialGrupos from "./comp/mundial-grupos";
@@ -23,6 +24,7 @@ function Apps() {
         <Route path="/champions-grupos" element={<ChampionsGrupos />} />
         <Route path="/champions-cuartos" element={<ChampionsCuartos />} />
         <Route path="/champions-semis" element={<ChampionsSemis />} />
+        <Route path="/champions-final" element={<ChampionsFinal />} />
         <Route path="/libertadores-grupos" element={<LibertadoresGrupos />} />
         <Route path="/europa-cuartos" element={<EuropaCuartos />} />
         <Route

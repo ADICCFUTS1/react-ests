@@ -51,6 +51,10 @@ export default (props) => {
         <NavLink to="/champions-semis" style={{ textDecoration: "none" }}>
           <Button variant="outlined">Semifinales</Button>
         </NavLink>
+
+        <NavLink to="/champions-final" style={{ textDecoration: "none" }}>
+          <Button variant="outlined">Final</Button>
+        </NavLink>
       </div>
 
       <Typography variant="h5" component="h5">

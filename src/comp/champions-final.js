@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import * as React from "react";
+import { useState, useEffect } from "react";
 
 import { NavLink, Link, withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
@@ -13,7 +14,7 @@ import {
   TableContainer,
   Paper,
   Button,
-  Divider
+  Typography
 } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/championsgruposjson";
+    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/champions-final";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -56,54 +57,37 @@ export default (props) => {
         </NavLink>
       </div>
 
+      <Typography variant="h5" component="h5">
+        FINAL
+      </Typography>
       <TableContainer component={Paper}>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>#</TableCell>
-              <TableCell>Equipo</TableCell>
-              <TableCell>PTS</TableCell>
-              <TableCell>PJ</TableCell>
-              <TableCell>PG</TableCell>
-              <TableCell>PE</TableCell>
-              <TableCell>PP</TableCell>
-              <TableCell>GF</TableCell>
-              <TableCell>GC</TableCell>
-              <TableCell>DIF</TableCell>
-            </TableRow>
-          </TableHead>
+        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+          {/*<TableHead>
+          <TableRow>
+            <TableCell>Dessert (100g serving)</TableCell>
+            <TableCell align="right">Calories</TableCell>
+            <TableCell align="right">Fat&nbsp;(g)</TableCell>
+            <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+            <TableCell align="right">Protein&nbsp;(g)</TableCell>
+          </TableRow>
+        </TableHead>*/}
           {!todos
             ? "Cargando..."
             : todos.map((todo, index) => {
                 return (
                   <TableBody>
                     <TableRow key={index}>
-                      {todo.numero <= 2 ? (
-                        <TableCell
-                          style={{ backgroundColor: "green", color: "white" }}
-                        >
-                          {todo.numero}
-                        </TableCell>
-                      ) : (
-                        <TableCell>{todo.numero}</TableCell>
-                      )}
-                      <TableCell>{todo.equipo}</TableCell>
-                      <TableCell>{todo.pts}</TableCell>
-                      <TableCell>{todo.pj}</TableCell>
-                      <TableCell>{todo.pg}</TableCell>
-                      <TableCell>{todo.pe}</TableCell>
-                      <TableCell>{todo.pp}</TableCell>
-                      <TableCell>{todo.gf}</TableCell>
-                      <TableCell>{todo.gc}</TableCell>
-                      <TableCell>{todo.dif}</TableCell>
+                      <TableCell component="th" scope="row"></TableCell>
+                      <TableCell>{todo.equipo1}</TableCell>
+                      <TableCell>{todo.local1}</TableCell>
+                      <TableCell>{todo.local2}</TableCell>
+                      <TableCell>{todo.equipo2}</TableCell>
                     </TableRow>
                   </TableBody>
                 );
               })}
-          <TableFooter />
         </Table>
       </TableContainer>
-      <Divider />
     </div>
   );
 };
