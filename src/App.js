@@ -12,7 +12,7 @@ import ChampionsFinal from "./comp/champions-final";
 import EuropaCuartos from "./comp/europa-cuartos";
 import EliminatoriasConmebol from "./comp/eliminatorias-conmebol";
 import MundialGrupos from "./comp/mundial-grupos";
-
+import Tests from "./comp/test";
 function Apps() {
   return (
     <>
@@ -32,6 +32,7 @@ function Apps() {
           element={<EliminatoriasConmebol />}
         />
         <Route path="/mundial-grupos" element={<MundialGrupos />} />
+        <Route path="/test" element={<Tests />} />
       </Routes>
     </>
   );
