@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://opensheet.elk.sh/1KlbYfjyegeeXt3Xxul8_BagK3SPJZkHpjK6mBO0E0_Y/Grupo1!A1:Z2074";
+    "https://opensheet.elk.sh/1EUmIOwosuGTI7L2DD6S02RjOG7vbxU3FjVVD1u-iYiw/Mundial!A1:Z2074";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
