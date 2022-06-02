@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://opensheet.elk.sh/1KlbYfjyegeeXt3Xxul8_BagK3SPJZkHpjK6mBO0E0_Y/Grupo1!A1:Z2074";
+    "https://opensheet.elk.sh/1KlbYfjyegeeXt3Xxul8_BagK3SPJZkHpjK6mBO0E0_Y/Grupo1!A2:Z2074";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -77,14 +77,12 @@ export default (props) => {
                 return (
                   <TableBody>
                     <TableRow key={index}>
-                      {todo.numero <= 2 ? (
+                      {todo.Equipo <= 2 ? (
                         <TableCell
                           style={{ backgroundColor: "green", color: "white" }}
-                        >
-                          {todo.numero}
-                        </TableCell>
+                        ></TableCell>
                       ) : (
-                        <TableCell>{todo.numero}</TableCell>
+                        <TableCell></TableCell>
                       )}
                       <TableCell>{todo.Equipo}</TableCell>
                       <TableCell>{todo.Pts}</TableCell>

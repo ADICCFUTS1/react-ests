@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/libertadoresgrupos";
+    "https://opensheet.elk.sh/1-cIOBiWukvyHioF-2dF7OUqIa7fs3JxaYva1cSiRn50/Libertadores!A1:Z2074";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -77,15 +77,15 @@ export default (props) => {
                       ) : (
                         <TableCell>{todo.numero}</TableCell>
                       )}
-                      <TableCell>{todo.equipo}</TableCell>
-                      <TableCell>{todo.pts}</TableCell>
-                      <TableCell>{todo.pj}</TableCell>
-                      <TableCell>{todo.pg}</TableCell>
-                      <TableCell>{todo.pe}</TableCell>
-                      <TableCell>{todo.pp}</TableCell>
-                      <TableCell>{todo.gf}</TableCell>
-                      <TableCell>{todo.gc}</TableCell>
-                      <TableCell>{todo.dif}</TableCell>
+                      <TableCell>{todo.Equipo}</TableCell>
+                      <TableCell>{todo.Pts}</TableCell>
+                      <TableCell>{todo.PJ}</TableCell>
+                      <TableCell>{todo.PG}</TableCell>
+                      <TableCell>{todo.PE}</TableCell>
+                      <TableCell>{todo.PP}</TableCell>
+                      <TableCell>{todo.GF}</TableCell>
+                      <TableCell>{todo.GC}</TableCell>
+                      <TableCell>{todo.DIF}</TableCell>
                     </TableRow>
                   </TableBody>
                 );
