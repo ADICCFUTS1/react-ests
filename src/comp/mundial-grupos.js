@@ -61,7 +61,7 @@ export default (props) => {
             <TableRow>
               <TableCell>#</TableCell>
               <TableCell>Equipo</TableCell>
-              <TableCell>PTS</TableCell>
+              <TableCell>Pts</TableCell>
               <TableCell>PJ</TableCell>
               <TableCell>PG</TableCell>
               <TableCell>PE</TableCell>

@@ -27,8 +27,11 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 export default (props) => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const Hoja = urlParams.get("Hoja");
   const url =
-    "https://opensheet.elk.sh/1KlbYfjyegeeXt3Xxul8_BagK3SPJZkHpjK6mBO0E0_Y/Grupo1!A2:Z2074";
+    "https://opensheet.elk.sh/1JnXdzWbSuqSApMi6P42lEznPo7led8vIKECdMFR_3IY/Partido1!A1:Z2074";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -52,23 +55,15 @@ export default (props) => {
         >
           <RefreshIcon fontSize="small" />
         </IconButton>
-        <Button variant="outlined">Grupos</Button>
       </div>
 
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
             <TableRow>
-              <TableCell>#</TableCell>
-              <TableCell>Equipo</TableCell>
-              <TableCell>PTS</TableCell>
-              <TableCell>PJ</TableCell>
-              <TableCell>PG</TableCell>
-              <TableCell>PE</TableCell>
-              <TableCell>PP</TableCell>
-              <TableCell>GF</TableCell>
-              <TableCell>GC</TableCell>
-              <TableCell>DIF</TableCell>
+              <TableCell>L</TableCell>
+              <TableCell>-</TableCell>
+              <TableCell>V</TableCell>
             </TableRow>
           </TableHead>
           {!todos
@@ -77,22 +72,9 @@ export default (props) => {
                 return (
                   <TableBody>
                     <TableRow key={index}>
-                      {todo.Equipo <= 2 ? (
-                        <TableCell
-                          style={{ backgroundColor: "green", color: "white" }}
-                        ></TableCell>
-                      ) : (
-                        <TableCell></TableCell>
-                      )}
-                      <TableCell>{todo.Equipo}</TableCell>
-                      <TableCell>{todo.Pts}</TableCell>
-                      <TableCell>{todo.PJ}</TableCell>
-                      <TableCell>{todo.PG}</TableCell>
-                      <TableCell>{todo.PE}</TableCell>
-                      <TableCell>{todo.PP}</TableCell>
-                      <TableCell>{todo.GF}</TableCell>
-                      <TableCell>{todo.GC}</TableCell>
-                      <TableCell>{todo.DIF}</TableCell>
+                      <TableCell>{todo.Local}</TableCell>
+                      <TableCell>{todo.Medio}</TableCell>
+                      <TableCell>{todo.Visitante}</TableCell>
                     </TableRow>
                   </TableBody>
                 );
