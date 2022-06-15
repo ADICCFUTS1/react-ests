@@ -42,6 +42,11 @@ export default (props) => {
   function refreshPage() {
     window.location.reload(false);
   }
+  const reg = "#";
+  const str = "#";
+  const nuevaStr = str.replace(reg, "nu");
+  console.log(nuevaStr);
+
   return (
     <div>
       <div className={classes.root}>
@@ -77,15 +82,8 @@ export default (props) => {
                 return (
                   <TableBody>
                     <TableRow key={index}>
-                      {todo.numero <= 2 ? (
-                        <TableCell
-                          style={{ backgroundColor: "green", color: "white" }}
-                        >
-                          {todo.numero}
-                        </TableCell>
-                      ) : (
-                        <TableCell>{todo.numero}</TableCell>
-                      )}
+                      <TableCell>{todo["#"]}</TableCell>
+
                       <TableCell>{todo.Equipo}</TableCell>
                       <TableCell>{todo.Pts}</TableCell>
                       <TableCell>{todo.PJ}</TableCell>
