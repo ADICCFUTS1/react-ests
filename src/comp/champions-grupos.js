@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import { NavLink, Link, withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 
 import {
@@ -15,6 +14,9 @@ import {
   Button,
   Divider
 } from "@material-ui/core";
+import "./App.css";
+import ChampionsButtons from "./componentes/champions-buttons";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -24,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 export default (props) => {
   const url =
-    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/championsgruposjson";
+    "https://opensheet.elk.sh/1EUmIOwosuGTI7L2DD6S02RjOG7vbxU3FjVVD1u-iYiw/Champions!A1:Z2074";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -35,27 +37,13 @@ export default (props) => {
     fetchApi();
   }, []);
   const classes = useStyles();
+  function refreshPage() {
+    window.location.reload(false);
+  }
 
   return (
     <div>
-      <div className={classes.root}>
-        <NavLink to="/champions-grupos" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Grupos</Button>
-        </NavLink>
-
-        <NavLink to="/champions-cuartos" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Cuartos</Button>
-        </NavLink>
-
-        <NavLink to="/champions-semis" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Semifinales</Button>
-        </NavLink>
-
-        <NavLink to="/champions-final" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Final</Button>
-        </NavLink>
-      </div>
-
+      <ChampionsButtons />
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
@@ -78,28 +66,29 @@ export default (props) => {
                 return (
                   <TableBody>
                     <TableRow key={index}>
-                      {todo.numero <= 2 ? (
+                      {todo["#"] <= 2 ? (
                         <TableCell
                           style={{ backgroundColor: "green", color: "white" }}
                         >
-                          {todo.numero}
+                          {todo["#"]}
                         </TableCell>
                       ) : (
-                        <TableCell>{todo.numero}</TableCell>
+                        <TableCell>{todo["#"]}</TableCell>
                       )}
-                      <TableCell>{todo.equipo}</TableCell>
-                      <TableCell>{todo.pts}</TableCell>
-                      <TableCell>{todo.pj}</TableCell>
-                      <TableCell>{todo.pg}</TableCell>
-                      <TableCell>{todo.pe}</TableCell>
-                      <TableCell>{todo.pp}</TableCell>
-                      <TableCell>{todo.gf}</TableCell>
-                      <TableCell>{todo.gc}</TableCell>
-                      <TableCell>{todo.dif}</TableCell>
+                      <TableCell>{todo.Equipo}</TableCell>
+                      <TableCell>{todo.Pts}</TableCell>
+                      <TableCell>{todo.PJ}</TableCell>
+                      <TableCell>{todo.PG}</TableCell>
+                      <TableCell>{todo.PE}</TableCell>
+                      <TableCell>{todo.PP}</TableCell>
+                      <TableCell>{todo.GF}</TableCell>
+                      <TableCell>{todo.GC}</TableCell>
+                      <TableCell>{todo.DIF}</TableCell>
                     </TableRow>
                   </TableBody>
                 );
               })}
+
           <TableFooter />
         </Table>
       </TableContainer>

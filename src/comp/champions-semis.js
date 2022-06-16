@@ -16,6 +16,8 @@ import {
   Button,
   Typography
 } from "@material-ui/core";
+import ChampionsButtons from "./componentes/champions-buttons";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     "& > *": {
@@ -39,23 +41,7 @@ export default (props) => {
 
   return (
     <div>
-      <div className={classes.root}>
-        <NavLink to="/champions-grupos" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Grupos</Button>
-        </NavLink>
-
-        <NavLink to="/champions-cuartos" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Cuartos</Button>
-        </NavLink>
-
-        <NavLink to="/champions-semis" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Semifinales</Button>
-        </NavLink>
-
-        <NavLink to="/champions-final" style={{ textDecoration: "none" }}>
-          <Button variant="outlined">Final</Button>
-        </NavLink>
-      </div>
+      <ChampionsButtons />
 
       <Typography variant="h5" component="h5">
         Semifinales
