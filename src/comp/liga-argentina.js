@@ -13,7 +13,7 @@ import {
 
 export default (props) => {
   const url =
-    "https://pirlotv3.herokuapp.com/full/app/estadisticas/json/ligaargjson";
+    "https://opensheet.elk.sh/1EUmIOwosuGTI7L2DD6S02RjOG7vbxU3FjVVD1u-iYiw/Liga-Argentina!A1:Z2074";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -35,47 +35,39 @@ export default (props) => {
             <TableCell>PG</TableCell>
             <TableCell>PE</TableCell>
             <TableCell>PP</TableCell>
-            <TableCell>GF : GC</TableCell>
+            <TableCell>GF</TableCell>
+            <TableCell>GC</TableCell>
             <TableCell>DIF</TableCell>
           </TableRow>
         </TableHead>
-        <TableBody>
-          {!todos
-            ? "Cargando..."
-            : todos.map((todo, index) => {
-                return (
+        {!todos
+          ? "Cargando..."
+          : todos.map((todo, index) => {
+              return (
+                <TableBody>
                   <TableRow key={index}>
-                    {todo.numero <= 4 ? (
+                    {todo["#"] <= 1 ? (
                       <TableCell
                         style={{ backgroundColor: "green", color: "white" }}
                       >
-                        {todo.numero}
-                      </TableCell>
-                    ) : todo.numero > 14 ? (
-                      <TableCell
-                        style={{ backgroundColor: "red", color: "white" }}
-                      >
-                        {todo.numero}
+                        {todo["#"]}
                       </TableCell>
                     ) : (
-                      <TableCell>{todo.numero}</TableCell>
+                      <TableCell>{todo["#"]}</TableCell>
                     )}
-
-                    <TableCell>{todo.equipo}</TableCell>
-                    <TableCell>{todo.pts}</TableCell>
-                    <TableCell>{todo.pj}</TableCell>
-                    <TableCell>{todo.pg}</TableCell>
-                    <TableCell>{todo.pe}</TableCell>
-                    <TableCell>{todo.pp}</TableCell>
-                    <TableCell>
-                      {todo.gf} : {todo.gc}
-                    </TableCell>
-                    <TableCell>{todo.dif}</TableCell>
+                    <TableCell>{todo.Equipo}</TableCell>
+                    <TableCell>{todo.Pts}</TableCell>
+                    <TableCell>{todo.PJ}</TableCell>
+                    <TableCell>{todo.PG}</TableCell>
+                    <TableCell>{todo.PE}</TableCell>
+                    <TableCell>{todo.PP}</TableCell>
+                    <TableCell>{todo.GF}</TableCell>
+                    <TableCell>{todo.GC}</TableCell>
+                    <TableCell>{todo.DIF}</TableCell>
                   </TableRow>
-                );
-              })}
-        </TableBody>
-
+                </TableBody>
+              );
+            })}
         <TableFooter />
       </Table>
     </TableContainer>

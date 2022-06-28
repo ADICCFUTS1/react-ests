@@ -36,16 +36,6 @@ export default (props) => {
 
   return (
     <div>
-      <div className={classes.root}>
-        {/*<Button variant="outlined">Grupos</Button>
-
-        <Button variant="outlined" href="champions-cuartos">
-          Cuartos
-        </Button>
-
-        <Button variant="outlined">Semifinal</Button>*/}
-      </div>
-
       <TableContainer component={Paper}>
         <Table>
           <TableHead>
@@ -68,14 +58,14 @@ export default (props) => {
                 return (
                   <TableBody>
                     <TableRow key={index}>
-                      {todo.numero <= 2 ? (
+                      {todo["#"] <= 2 ? (
                         <TableCell
                           style={{ backgroundColor: "green", color: "white" }}
                         >
-                          {todo.numero}
+                          {todo["#"]}
                         </TableCell>
                       ) : (
-                        <TableCell>{todo.numero}</TableCell>
+                        <TableCell>{todo["#"]}</TableCell>
                       )}
                       <TableCell>{todo.Equipo}</TableCell>
                       <TableCell>{todo.Pts}</TableCell>
@@ -90,10 +80,10 @@ export default (props) => {
                   </TableBody>
                 );
               })}
+
           <TableFooter />
         </Table>
       </TableContainer>
-
       <Divider />
     </div>
   );
