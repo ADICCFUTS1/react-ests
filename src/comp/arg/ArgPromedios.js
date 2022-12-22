@@ -83,9 +83,9 @@ export default (props) => {
               <TableRow>
                 <TableCell>#</TableCell>
                 <TableCell>Equipo</TableCell>
-                <TableCell>20</TableCell>
                 <TableCell>21</TableCell>
                 <TableCell>22</TableCell>
+                <TableCell>23</TableCell>
                 <TableCell>Pts</TableCell>
                 <TableCell>PJ</TableCell>
                 <TableCell>Prom</TableCell>
@@ -107,9 +107,9 @@ export default (props) => {
                           <TableCell>{todo["#"]}</TableCell>
                         )}
                         <TableCell>{todo.Equipo}</TableCell>
-                        <TableCell>{todo["20"]}</TableCell>
                         <TableCell>{todo["21"]}</TableCell>
                         <TableCell>{todo["22"]}</TableCell>
+                        <TableCell>{todo["23"]}</TableCell>
                         <TableCell>{todo.Pts}</TableCell>
                         <TableCell>{todo.PJ}</TableCell>
                         <TableCell>{todo.Prom}</TableCell>
