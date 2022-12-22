@@ -1,3 +1,8 @@
 # dotenv environment variables file
 .env
+<<<<<<< HEAD
 .env.test
+=======
+.env.test
+node_modules
+>>>>>>> acb32fb9 (jmuikmn)
