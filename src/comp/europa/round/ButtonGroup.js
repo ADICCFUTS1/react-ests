@@ -13,10 +13,7 @@ const useStyles = makeStyles((theme) => ({
     "& > *": {
       margin: theme.spacing(1),
     },
-<<<<<<< HEAD
-=======
     "overflow-x": "scroll",
->>>>>>> acb32fb9 (jmuikmn)
   },
   buttonGroup: {
     "overflow-x": "scroll",
