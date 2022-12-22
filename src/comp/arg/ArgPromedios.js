@@ -56,7 +56,6 @@ export default (props) => {
     <div className={classes.root}>
       <ArgButtons />
       <div>
-        <div className={classes.root}>
           <IconButton
             onClick={refreshPage}
             aria-label="delete"
@@ -77,8 +76,7 @@ export default (props) => {
               </Paper>
             </Grid>
           </Grid>
-        </div>
-
+        <p> </p>
         <TableContainer component={Paper}>
           <Table>
             <TableHead>

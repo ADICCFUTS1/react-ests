@@ -42,10 +42,10 @@ function Apps() {
         <Route path="/laliga" element={<LaLiga />} />
         <Route path="/serie-a" element={<SerieA />} />
         <Route path="/ligue-1" element={<Ligue1 />} />
-        <Route path="/liga-argentina" element={<LigaArgentina />} />
-        <Route path="/liga-argentina/anual" element={<LigaArgentinaAnual />} />
+        <Route path="/argentina/torneo" element={<LigaArgentina />} />
+        <Route path="/argentina/anual" element={<LigaArgentinaAnual />} />
         <Route
-          path="/liga-argentina/promedios"
+          path="/argentina/promedios"
           element={<LigaArgentinaPromedios />}
         />
         <Route path="/premier-league" element={<PremierLeague />} />

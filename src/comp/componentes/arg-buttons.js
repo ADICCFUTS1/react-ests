@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { NavLink, Link, withRouter } from "react-router-dom";
 import { makeStyles } from "@material-ui/core/styles";
 import { Button } from "@material-ui/core";
+import { useNavigate } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -12,39 +13,16 @@ const useStyles = makeStyles((theme) => ({
 }));
 const Buttons = () => {
   const classes = useStyles();
+  let navigate = useNavigate();
+  const Route = (route) => {
+    let path = `/argentina/${route}`;
+    navigate(path, { replace: true });
+  };
   return (
-    <div>
-      <NavLink
-        className={classes.root}
-        to="/liga-argentina"
-        style={{ textDecoration: "none" }}
-      >
-        <Button variant="outlined">Tabla Torneo</Button>
-      </NavLink>
-
-      <NavLink
-        className={classes.root}
-        to="/liga-argentina/anual"
-        style={{ textDecoration: "none" }}
-      >
-        <Button variant="outlined">Tabla anual</Button>
-      </NavLink>
-
-      <NavLink
-        className={classes.root}
-        to="/liga-argentina/promedios"
-        style={{ textDecoration: "none" }}
-      >
-        <Button variant="outlined">Promedios</Button>
-      </NavLink>
-
-      {/*<NavLink
-        className={classes.root}
-        to="/champions-final"
-        style={{ textDecoration: "none" }}
-      >
-        <Button variant="outlined">Final</Button>
-      </NavLink>*/}
+    <div className={classes.root}>
+        <Button variant="outlined"  onClick={() => Route("torneo")}>Tabla Torneo</Button>
+        <Button variant="outlined"  onClick={() => Route("anual")}>Tabla anual</Button>
+        <Button variant="outlined" onClick={() => Route("promedios")}>Promedios</Button>
     </div>
   );
 };

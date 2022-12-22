@@ -94,6 +94,7 @@ export default (props) => {
             </Paper>
           </Grid>{" "}
         </Grid>
+        <p></p>
         <TableContainer component={Paper}>
           <Table>
             <TableHead>
@@ -116,7 +117,7 @@ export default (props) => {
                   return (
                     <TableBody>
                       <TableRow key={index}>
-                        {todo["#"] <= 5 && todo.Equipo !== "Boca Juniors" ? (
+                        {todo["#"] <= 3  ? (
                           <TableCell
                             style={{
                               backgroundColor: "#00af71",
@@ -125,20 +126,13 @@ export default (props) => {
                           >
                             {todo["#"]}
                           </TableCell>
-                        ) : todo["#"] >= 5 &&
-                          todo["#"] <= 10 &&
-                          todo.Equipo !== "Boca Juniors" ? (
+                        ) : todo["#"] >= 4 &&
+                          todo["#"] <= 9 ? (
                           <TableCell
                             style={{
                               backgroundColor: "#f5f374",
                               color: "black"
                             }}
-                          >
-                            {todo["#"]}
-                          </TableCell>
-                        ) : todo.Equipo === "Boca Juniors" ? (
-                          <TableCell
-                            style={{ backgroundColor: "green", color: "white" }}
                           >
                             {todo["#"]}
                           </TableCell>
