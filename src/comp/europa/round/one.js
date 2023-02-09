@@ -59,7 +59,10 @@ export default function One() {
         <EuropaButtonGroup />
 
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+        <Grid item xs={12}>
+            <Typography variant="h6" component="h3">
+              Dieciseisavos de final
+            </Typography>
           </Grid>
           {!todos ? (
             <Grid item xs={12}>
