@@ -62,6 +62,7 @@ export default function Two() {
               Octavos de final
             </Typography>
           </Grid>
+          {/* </Grid> */}
           {!todos ? (
             <Grid item xs={12}>
               <CardLoad />
