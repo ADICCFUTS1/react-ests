@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Two() {
   const classes = useStyles();
   const url =
-    "https://opensheet.elk.sh/1EUmIOwosuGTI7L2DD6S02RjOG7vbxU3FjVVD1u-iYiw/Manual!A10:K14";
+    "https://opensheet.elk.sh/1nZfTRS2udvp15treTdFyURIlEISMX08338TGvomZi4U/EuropaManual!A18:G34";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -59,7 +59,7 @@ export default function Two() {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Typography variant="h6" component="h3">
-              Cuartos de final
+              Octavos de final
             </Typography>
           </Grid>
           {!todos ? (

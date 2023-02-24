@@ -36,7 +36,7 @@ export default function EuropaButtonGroup() {
         aria-label="outlined primary button group"
       >
         <Button onClick={() => Route("round")}>16AVOS</Button>
-        <Button onClick={() => Route("round2")} disabled={true}>Octavos</Button>
+        <Button onClick={() => Route("round2")}>Octavos</Button>
         <Button onClick={() => Route("round3")} disabled={true}>Cuartos</Button>
         <Button onClick={() => Route("round4")} disabled={true}>Semis</Button>
         <Button onClick={() => Route("round5")} disabled={true}>Final</Button>
