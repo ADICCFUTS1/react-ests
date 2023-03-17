@@ -35,10 +35,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Three() {
+export default function Two() {
   const classes = useStyles();
   const url =
-    "https://opensheet.elk.sh/1EUmIOwosuGTI7L2DD6S02RjOG7vbxU3FjVVD1u-iYiw/Manual!A15:K17";
+    "https://opensheet.elk.sh/1nZfTRS2udvp15treTdFyURIlEISMX08338TGvomZi4U/EuropaManual!A35:G43";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -59,9 +59,10 @@ export default function Three() {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Typography variant="h6" component="h3">
-              Semifinales
+              Cuartos de final
             </Typography>
           </Grid>
+          {/* </Grid> */}
           {!todos ? (
             <Grid item xs={12}>
               <CardLoad />

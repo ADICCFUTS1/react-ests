@@ -37,7 +37,7 @@ export default function EuropaButtonGroup() {
       >
         <Button onClick={() => Route("round")}>16AVOS</Button>
         <Button onClick={() => Route("round2")}>Octavos</Button>
-        <Button onClick={() => Route("round3")} disabled={true}>Cuartos</Button>
+        <Button onClick={() => Route("round3")}>Cuartos</Button>
         <Button onClick={() => Route("round4")} disabled={true}>Semis</Button>
         <Button onClick={() => Route("round5")} disabled={true}>Final</Button>
       </ButtonGroup>

@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Two() {
   const classes = useStyles();
   const url =
-    "https://opensheet.elk.sh/1EUmIOwosuGTI7L2DD6S02RjOG7vbxU3FjVVD1u-iYiw/Manual!A10:K14";
+    "https://opensheet.elk.sh/1nZfTRS2udvp15treTdFyURIlEISMX08338TGvomZi4U/ChampionsManual!A18:H26";
   const [todos, setTodos] = useState();
   const fetchApi = async () => {
     const response = await fetch(url);
@@ -55,31 +55,39 @@ export default function Two() {
       <Container maxWidth="sm">
         <Head />
         <ButtonGroup />
-
-        <Grid container spacing={3}>
+        {/*{todos && (
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            {todos.map((todo, index) => (
+              <img
+                key={index}
+                src={todo.Clasificados}
+                alt={`Equipo ${index + 1}`}
+              />
+            ))}
+          </div>
+            )}*/}
+        <Grid item xs={12}>
+          <Typography variant="h6" component="h3">
+            Cuartos de final
+          </Typography>
+        </Grid>
+        {!todos ? (
           <Grid item xs={12}>
-            <Typography variant="h6" component="h3">
-              Cuartos de final
-            </Typography>
+            <CardLoad />
           </Grid>
-          {!todos ? (
-            <Grid item xs={12}>
-              <CardLoad />
-            </Grid>
-          ) : (
-            todos.map((todo, index) => {
-              return (
+        ) : (
+          todos.map((todo, index) => (
+            <React.Fragment key={index}>
+              <Grid container spacing={3}>
                 <Grid item xs={12}>
                   <Get {...todo} />
                 </Grid>
-              );
-            })
-          )}
-          {/*<Grid item xs={6}>
-          <Octavos />
-        </Grid>*/}
-        </Grid>
+              </Grid>
+            </React.Fragment>
+          ))
+        )}
       </Container>
     </React.Fragment>
   );
+  
 }

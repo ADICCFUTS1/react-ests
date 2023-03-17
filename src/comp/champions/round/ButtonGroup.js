@@ -35,7 +35,7 @@ export default function ChampionsButtonGroup() {
         aria-label="outlined primary button group"
       >
         <Button onClick={() => Route("round")}>Octavos</Button>
-        <Button onClick={() => Route("round2")} disabled={true}>Cuartos</Button>
+        <Button onClick={() => Route("round2")}>Cuartos</Button>
         <Button onClick={() => Route("round3")} disabled={true}>Semis</Button>
         <Button onClick={() => Route("round4")} disabled={true}>Final</Button>
       </ButtonGroup>

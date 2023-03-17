@@ -77,9 +77,6 @@ export default function One() {
               );
             })
           )}
-          {/*<Grid item xs={6}>
-            <Octavos />
-          </Grid>*/}
         </Grid>
       </Container>
     </React.Fragment>
